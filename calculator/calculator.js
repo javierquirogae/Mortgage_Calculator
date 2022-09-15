@@ -57,4 +57,5 @@ function calculateMonthlyPayment(values) {
 // update the UI to show the value.
 function updateMonthly(monthly) {
   console.log(monthly);
+  document.getElementById("monthly-payment").innerText = `$${Math.round(monthly)}`;
 }
