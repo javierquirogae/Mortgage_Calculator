@@ -36,7 +36,7 @@ function update() {
   document.getElementById("loan-amount").placeholder = values[0];
   document.getElementById("loan-years").placeholder = values[1];
   document.getElementById("loan-rate").placeholder = values[2];
-  calculateMonthlyPayment(values);
+  updateMonthly(calculateMonthlyPayment(values));
 }
 
 // Given an object of values (a value has amount, years and rate ),
@@ -50,7 +50,7 @@ function calculateMonthlyPayment(values) {
   console.log(numerator);
   let denominator = 1 - Math.pow(1 + i, -n);
   console.log(denominator);
-  updateMonthly(numerator/denominator)
+  return (numerator/denominator).toFixed(2);
 }
 
 // Given a string representing the monthly payment value,

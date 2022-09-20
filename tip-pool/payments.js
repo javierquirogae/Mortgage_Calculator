@@ -20,7 +20,7 @@ function submitPaymentInfo(evt) {
     paymentId += 1;
 
     allPayments['payment' + paymentId] = curPayment;
-
+    console.log(allPayments['payment' + paymentId].curPayment);
     appendPaymentTable(curPayment);
     updateServerTable();
     updateSummary();
